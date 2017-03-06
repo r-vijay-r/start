@@ -1,0 +1,7 @@
+<h1>{{ (info | async)?.name }}</h1>
+<input type="text" #txt (keyup.enter)="add(txt.value)">
+  <ul>
+    <li *ngFor="let item of items | async">
+      {{ item?.value }}
+    </li>
+  </ul>
